@@ -1,7 +1,7 @@
-import { useState } from "react";
+//import { useState } from "react";
 
 // https://uibakery.io/regex-library/phone-number
-const isValidPhone = (str) =>
+/*const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
     str
   );
@@ -28,15 +28,15 @@ const fakeCart = [
     unitPrice: 15,
     totalPrice: 15,
   },
-];
+];*/
 
 function CreateOrder() {
   // const [withPriority, setWithPriority] = useState(false);
-  const cart = fakeCart;
+  //const cart = fakeCart;
 
   return (
     <div>
-      <h2>Ready to order? Let's go!</h2>
+      <h2>{"Ready to order? Let's go!"}</h2>
 
       <form>
         <div>
