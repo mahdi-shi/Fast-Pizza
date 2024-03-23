@@ -36,8 +36,10 @@ function Cart() {
       <h2>Your cart, %NAME%</h2>
 
       <div className="mt-4">
-        <Button to="/order/new">Order pizzas</Button>
-        <button>Clear cart</button>
+        <Button to="/order/new" type="primary">
+          Order pizzas
+        </Button>
+        <button className="ml-2">Clear cart</button>
       </div>
     </div>
   );
