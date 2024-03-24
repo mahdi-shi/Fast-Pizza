@@ -7,7 +7,11 @@ function MenuItem({ pizza }) {
 
   return (
     <li className="flex gap-4 py-2">
-      <img src={imageUrl} className="h-24" alt={name} />
+      <img
+        src={imageUrl}
+        className={`h-24 ${soldOut ? "grayscale" : ""}`}
+        alt={name}
+      />
       <div className="flex grow flex-col">
         <p className="font-medium">{name}</p>
         <p className="text-sm capitalize italic">{ingredients.join(", ")}</p>
