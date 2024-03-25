@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
 import { formatCurrency } from "../../utilites/helpers";
-import Button from "../../ui/Button";
+import { useSelector } from "react-redux";
+import DeleteCart from "./DeleteCart";
+import UpdateItemQuantity from "./UpdateItemQuantity";
+import { getCurrentQuantityById } from "./cartSlice";
 
 function CartItem({ item }) {
   const { pizzaId, name, quantity, totalPrice } = item;
+  const currentQuantity = useSelector(getCurrentQuantityById(pizzaId));
 
   return (
     <li className="justify-between pb-3 pt-1 sm:flex sm:items-center">
@@ -14,7 +18,11 @@ function CartItem({ item }) {
         <p className="text-sm font-bold sm:mt-3">
           {formatCurrency(totalPrice)}
         </p>
-        <Button type="small">Delete</Button>
+        <UpdateItemQuantity
+          pizzaId={pizzaId}
+          currentQuantity={currentQuantity}
+        />
+        <DeleteCart pizzaId={pizzaId} />
       </div>
     </li>
   );
