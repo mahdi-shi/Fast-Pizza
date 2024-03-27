@@ -3,7 +3,6 @@ import Button from "../../ui/Button";
 import PropTypes from "prop-types";
 import {
   decreaseQuantity,
-  getCurrentQuantityById,
   increaseQuantity,
 } from "./cartSlice";
 
